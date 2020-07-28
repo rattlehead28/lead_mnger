@@ -34,7 +34,7 @@ import { NgxSpinnerService } from "ngx-spinner";
     LeadsCommunicationModalComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
