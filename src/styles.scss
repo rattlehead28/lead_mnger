@@ -1,0 +1,35 @@
+//  Styles for NgPrime Components
+$bg-color: #343a40;
+.leads_table {
+  .ui-table {
+    .ui-table-thead {
+      tr {
+        th {
+          background-color: $bg-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.leads-modal, .delete_lead_form {
+  .ui-dialog {
+    .ui-dialog-titlebar {
+      background-color: $bg-color;
+      color: #fff;
+    }
+  }
+}
+
+.delete_lead_form {
+  .ui-dialog-content {
+    display: none;
+  }
+  .ui-dialog {
+    .ui-dialog-footer {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}

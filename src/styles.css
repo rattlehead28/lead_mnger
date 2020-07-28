@@ -1,0 +1,19 @@
+.leads_table .ui-table .ui-table-thead tr th {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.leads-modal .ui-dialog .ui-dialog-titlebar, .delete_lead_form .ui-dialog .ui-dialog-titlebar {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.delete_lead_form .ui-dialog-content {
+  display: none;
+}
+
+.delete_lead_form .ui-dialog .ui-dialog-footer {
+  padding: 20px;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */

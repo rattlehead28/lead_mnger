@@ -1,0 +1,18 @@
+p-footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+p-footer div button {
+  margin: 5px;
+}
+
+p-footer div span {
+  padding: 15px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=add-leads-modal.component.css.map */

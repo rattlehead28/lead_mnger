@@ -1,0 +1,14 @@
+
+p-footer{
+    div{
+        display: flex;
+        justify-content: flex-end;
+        button{
+            margin: 5px;
+        }
+        span{
+            padding: 15px;
+            cursor: pointer;
+        }
+    }
+}

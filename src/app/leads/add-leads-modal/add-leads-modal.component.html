@@ -1,0 +1,98 @@
+<p-dialog
+  header="Add Lead"
+  modal="true"
+  closable="true"
+  resizable="false"
+  blockScroll="true"
+  [(visible)]="displayModal"
+  (onHide)="closeModal()"
+  class="leads-modal"
+>
+  <form [formGroup]="leadsData" class="add_lead_form">
+    <div class="form-group">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <label for="first_name" class="form-label">Firstname *</label>
+            <input
+              type="text"
+              name="first_name"
+              class="form-control"
+              formControlName="first_name"
+            />
+          </div>
+          <div class="col-6">
+            <label for="last_name" class="form-label">Lastname *</label>
+            <input
+              type="text"
+              name="last_name"
+              class="form-control"
+              formControlName="last_name"
+            />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-6">
+            <label for="email" class="form-label">Email *</label>
+            <input
+              type="text"
+              name="email"
+              class="form-control"
+              formControlName="email"
+            />
+          </div>
+          <div class="col-6">
+            <label for="mobile" class="form-label">Mobile *</label>
+            <input
+              type="tel"
+              name="mobile"
+              class="form-control"
+              formControlName="mobile"
+            />
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-6">
+            <label for="location_type" class="form-label"
+              >Location Type *</label
+            >
+            <select
+              type="text"
+              name="location_type"
+              class="form-control"
+              formControlName="location_type"
+            >
+              <option>Country</option>
+              <option>City</option>
+              <option>Zip</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="location_string" class="form-label"
+              >Location String *</label
+            >
+            <input
+              type="text"
+              name="location_string"
+              class="form-control"
+              formControlName="location_string"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <p-footer>
+    <div>
+      <span (click)="displayModal = false">Close</span>
+      <button
+        type="submit"
+        class="btn btn-secondary add_lead_btn"
+        (click)="postData()"
+        [disabled]="!leadsData.valid"
+      >
+        Save
+      </button>
+    </div>
+  </p-footer>
+</p-dialog>

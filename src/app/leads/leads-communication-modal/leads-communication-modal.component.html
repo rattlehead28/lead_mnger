@@ -1,0 +1,36 @@
+<p-dialog
+  header="Mark Communication"
+  modal="true"
+  closable="true"
+  resizable="false"
+  blockScroll="true"
+  [(visible)]="displayModal"
+  (onHide)="closeModal()"
+  [style]="{ width: '500px' }"
+  class="leads-modal"
+>
+  <h6>Communication</h6>
+  <form class="update_lead_form">
+    <textarea
+      class="form-control"
+      rows="3"
+      cols="10"
+      name="communication"
+      [(ngModel)]="communication"
+    ></textarea>
+  </form>
+
+  <p-footer>
+    <div>
+      <span (click)="displayModal = false">Close</span>
+      <button
+        type="submit"
+        class="btn btn-secondary update_lead_btn"
+        (click)="postData()"
+        [disabled]="!communication"
+      >
+        Save
+      </button>
+    </div>
+  </p-footer>
+</p-dialog>

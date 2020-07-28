@@ -1,0 +1,15 @@
+.action-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.action-buttons button {
+  margin: 2px;
+  font-size: 0.7rem;
+}
+
+.cancel-button {
+  border: none;
+}
+/*# sourceMappingURL=leads.component.css.map */
