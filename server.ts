@@ -38,7 +38,7 @@ app.engine('html', ngExpressEngine({
   ]
 }));
 
-const template = fs.readFileSync(join(__dirname, '.', DIST_FOLDER,'index.html')).toString();
+const template = fs.readFileSync(join(DIST_FOLDER,'index.html')).toString();
 const window = domino.createWindow(template);
 global['window'] = window;
 global['document'] = window.document;
