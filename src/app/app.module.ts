@@ -25,6 +25,8 @@ import { MessageService } from "primeng/api";
 //-------------------------------
 
 import { NgxSpinnerService } from "ngx-spinner";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,7 @@ import { NgxSpinnerService } from "ngx-spinner";
     DialogModule,
     ConfirmDialogModule,
     ToastModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     NgxSpinnerService,
