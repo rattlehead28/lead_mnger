@@ -11,6 +11,18 @@ export class AppComponent {
   title = 'lead-mngr';
   @HostListener('window:resize',['$event'])
   addClassOnResize(evt){
+  this.handleClass();
+  }
+
+  constructor(private renderer: Renderer2) {
+    console.log(environment.apiUrl);
+  }
+
+  ngOnInit(){
+   this.handleClass();
+  }
+
+  handleClass(){
     const windowSize = window.innerWidth;
     console.log(windowSize)
     if(windowSize<=900){
@@ -20,9 +32,4 @@ export class AppComponent {
       this.renderer.removeClass(document.body, 'isPlatformMobile');
     }
   }
-
-  constructor(private renderer: Renderer2) {
-    console.log(environment.apiUrl);
-  }
-
 }
