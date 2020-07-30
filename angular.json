@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cj-app:build"
+            "browserTarget": "lead-mngr:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cj-app:build:production"
+              "browserTarget": "lead-mngr:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cj-app:build"
+            "browserTarget": "lead-mngr:build"
           }
         },
         "test": {
@@ -137,7 +137,7 @@
         }
       }
     },
-    "cj-app-e2e": {
+    "lead-mngr-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -146,11 +146,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cj-app:serve"
+            "devServerTarget": "lead-mngr:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cj-app:serve:production"
+              "devServerTarget": "lead-mngr:serve:production"
             }
           }
         },
@@ -166,7 +166,7 @@
       }
     }
   },
-  "defaultProject": "cj-app",
+  "defaultProject": "lead-mngr",
   "cli": {
     "analytics": false
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, Renderer2 } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -8,9 +8,21 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent {
 
-  title = 'cj-app';
+  title = 'lead-mngr';
+  @HostListener('window:resize',['$event'])
+  addClassOnResize(evt){
+    const windowSize = window.innerWidth;
+    console.log(windowSize)
+    if(windowSize<=900){
+      this.renderer.addClass(document.body, 'isPlatformMobile');
+    }
+    else{
+      this.renderer.removeClass(document.body, 'isPlatformMobile');
+    }
+  }
 
-  constructor() {
+  constructor(private renderer: Renderer2) {
     console.log(environment.apiUrl);
   }
+
 }

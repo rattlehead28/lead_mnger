@@ -16,4 +16,8 @@
   padding: 20px;
   text-align: center;
 }
+
+.isPlatformMobile {
+  background-color: #BB2CD9;
+}
 /*# sourceMappingURL=styles.css.map */
