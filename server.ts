@@ -38,7 +38,7 @@ app.engine('html', ngExpressEngine({
   ]
 }));
 
-const template = fs.readFileSync(join(__dirname, '.', DIST_FOLDER,'index.html')).toString();
+const template = fs.readFileSync(join(__dirname, '.',DIST_FOLDER,'index.html')).toString();
 const window = domino.createWindow(template);
 global['window'] = window;
 global['document'] = window.document;
@@ -59,6 +59,6 @@ app.get('*', (req, res) => {
 });
 
 // Start up the Node server
-app.listen(PORT, () => {
-  console.log(`Node Express server listening on http://localhost:${PORT}`);
+app.listen("4200", () => {
+  console.log(`Node Express server listening on http://localhost:4200`);
 });
