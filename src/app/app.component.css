@@ -1,4 +1,18 @@
 .isPlatformMobile {
-  background-color: #777E8B;
+  background-color: #777e8b;
+}
+
+.loader-css {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.inline-loader-div {
+  position: absolute;
+  top: 50%;
+  left: 45%;
 }
 /*# sourceMappingURL=app.component.css.map */
