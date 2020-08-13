@@ -27,6 +27,7 @@ import { MessageService } from "primeng/api";
 import { NgxSpinnerService } from "ngx-spinner";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ShimmerComponent } from './shimmer/shimmer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { environment } from '../environments/environment';
     LeadsComponent,
     AddLeadsModalComponent,
     LeadsCommunicationModalComponent,
+    ShimmerComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

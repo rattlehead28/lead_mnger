@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { LeadsService } from "../services/leads.service";
 import { ConfirmationService, MessageService } from "primeng/api";
 import { NgxSpinnerService } from "ngx-spinner";
+import { ShimmerService } from '../services/shimmer.service';
+// import { ShimmerComponent } from "../shimmer/shimmer.component";
 
 interface ILeadInfo {
   first_name: string;
@@ -26,11 +28,12 @@ export class LeadsComponent implements OnInit {
   leadCommunication: string;
   leadId: string;
   //---------------------------------
+  showShimmer:boolean = true;
   constructor(
     private leadsService: LeadsService,
     private confirmationService: ConfirmationService,
     private messageService: MessageService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService, private shimmerService: ShimmerService
   ) {}
 
   ngOnInit() {
@@ -41,6 +44,7 @@ export class LeadsComponent implements OnInit {
     this.leadsService.getLeads().subscribe(
       (res: [ILeadInfo]) => {
         this.leadsData = res;
+        this.shimmerService.showShimmerEffect(false);
       },
       (err) => {
         this.displayCustomMessage("error", "Some error occurred");

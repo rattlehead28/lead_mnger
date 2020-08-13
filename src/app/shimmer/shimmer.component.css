@@ -1,0 +1,32 @@
+.animate {
+  display: inline-block;
+  -webkit-animation: shimmer 2s infinite;
+          animation: shimmer 2s infinite;
+  background: -webkit-gradient(linear, left top, right top, color-stop(4%, #eff1f3), color-stop(25%, #e2e2e2), color-stop(36%, #eff1f3));
+  background: linear-gradient(to right, #eff1f3 4%, #e2e2e2 25%, #eff1f3 36%);
+  background-size: 1000px 100%;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.child-class {
+  position: relative !important;
+  z-index: -1 !important;
+}
+/*# sourceMappingURL=shimmer.component.css.map */

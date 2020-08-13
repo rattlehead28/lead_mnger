@@ -1,53 +1,59 @@
 <p-toast></p-toast>
 <ngx-spinner></ngx-spinner>
-<div class="container-fluid">
-  <div class="row mb-2">
-    <div class="col-4">
-      <button
-        class="btn btn-secondary add_lead_modal_btn"
-        (click)="isAddLeadModalOpen = true"
-      >
-        Add Lead
-      </button>
+
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-4">
+        <app-shimmer>
+        <button
+          class="btn btn-secondary add_lead_modal_btn"
+          (click)="isAddLeadModalOpen = true"
+        >
+          Add Lead
+        </button>
+      </app-shimmer>
+      </div>
     </div>
+    <!-- LEADS TABLE -->
+    <app-shimmer>
+      <p-table class="leads_table" [value]="leadsData" [responsive]="true">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile Num</th>
+            <th>Location Type</th>
+            <th>Action</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-lead>
+          <tr>
+            <td>{{ lead.first_name }} {{ lead.last_name }}</td>
+            <td>{{ lead.email }}</td>
+            <td>{{ lead.mobile }}</td>
+            <td>{{ lead.location_type }}</td>
+            <td>
+              <div class="action-buttons">
+                <button
+                  class="btn btn-secondary update_lead_modal_btn"
+                  (click)="openLeadsComunicationModal(lead)"
+                >
+                  Mark Update
+                </button>
+                <button
+                  class="btn btn-secondary delete_lead_modal_btn"
+                  (click)="deleteLead(lead.id)"
+                >
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </app-shimmer>
   </div>
-   <!-- LEADS TABLE -->
-  <p-table class="leads_table" [value]="leadsData" [responsive]="true">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Mobile Num</th>
-        <th>Location Type</th>
-        <th>Action</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-lead>
-      <tr>
-        <td>{{ lead.first_name }} {{ lead.last_name }}</td>
-        <td>{{ lead.email }}</td>
-        <td>{{ lead.mobile }}</td>
-        <td>{{ lead.location_type }}</td>
-        <td>
-          <div class="action-buttons">
-            <button
-              class="btn btn-secondary update_lead_modal_btn"
-              (click)="openLeadsComunicationModal(lead)"
-            >
-              Mark Update
-            </button>
-            <button
-              class="btn btn-secondary delete_lead_modal_btn"
-              (click)="deleteLead(lead.id)"
-            >
-              Delete
-            </button>
-          </div>
-        </td>
-      </tr>
-    </ng-template>
-  </p-table>
-</div>
+
 
 <!-- ADD LEAD MODAL CHILD COMPONENT -->
 <app-add-leads-modal

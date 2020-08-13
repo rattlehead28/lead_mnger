@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,OAAO,EAAE,YAAY;EACrB,SAAS,EAAE,mBAAmB;EAC9B,UAAU,EAAE,+DAA+D;EAC3E,eAAe,EAAE,WAAW;CAC7B;;AAID,UAAU,CAAV,OAAU;EACR,EAAE;IACA,mBAAmB,EAAE,SAAS;;EAEhC,IAAI;IACF,mBAAmB,EAAE,QAAQ;;;;AAIjC,AAAA,YAAY,CAAC;EACT,QAAQ,EAAE,mBAAmB;EAC7B,OAAO,EAAE,aAAa;CACvB",
+    "sources": [
+        "shimmer.component.scss"
+    ],
+    "names": [],
+    "file": "shimmer.component.css"
+}

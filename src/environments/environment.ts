@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   // apiUrl: 'http://18.212.175.222:4059'
-  //apiUrl: 'http://localhost:8080'
-  apiUrl: ' https://lead-mngr-server.herokuapp.com'
+  apiUrl: 'http://localhost:8080'
+  // apiUrl: ' https://lead-mngr-server.herokuapp.com'
 };
 
 /*
